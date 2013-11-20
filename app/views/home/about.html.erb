@@ -1,0 +1,26 @@
+<div id="content">
+  <h1>Acerca de nosotros</h1>
+  <p>Este fue un ejemplo de tarea hecho por los alumnos de Desarrollo Web de UNITEC</p>
+  <% if @set.present? %>
+    <p><%= "Este es el Set #{@set}" %></p>
+  <% end %>
+  <h2>Listado de Alumnos</h2>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>No. Cuenta</th>
+    </tr>
+    <tr>
+      <td>Juan Castillo</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>Clementina Orellana</td>
+      <td>321</td>
+    </tr>
+    <tr>
+      <td>Roger Paz</td>
+      <td>456</td>
+    </tr>
+  </table>
+</div>

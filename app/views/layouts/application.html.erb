@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NumericSets</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1>RoR Numerics</h1>
+        <div class="slogan">The best app for number sets!</div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="current"><%= link_to "Home", root_path %></li>
+          <li><a href="#">Sets</a></li>
+          <li><a href="#">Set Report</a></li>
+          <li><%= link_to "About us", about_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <p>Copyright &copy; simplestyle_7 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+class NumberValuesController < ApplicationController
+end
