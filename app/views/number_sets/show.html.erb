@@ -1,2 +1,13 @@
-<h1>NumberSets#show</h1>
-<p>Find me in app/views/number_sets/show.html.erb</p>
+<h1><%= @set.title %></h1>
+<table id="js_number_values">
+  <% @set.number_values.each do |n| %>
+    <tr><td><%= n.value %></td></tr>
+  <% end %>
+</table>
+<%= form_for [@set, @set.number_values.build], url: number_set_number_values_path(@set),  id: "new_number_value", remote: true do |f| %>
+  <p>
+    <%= f.label :value %>
+    <%= f.text_field :value %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

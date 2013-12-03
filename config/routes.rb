@@ -3,6 +3,10 @@ NumericSets::Application.routes.draw do
 
   match "/about(/:set_id)" => "home#about", as: :about
 
+  resources :number_sets do
+    resources :number_values
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
